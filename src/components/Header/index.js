@@ -44,7 +44,7 @@ const Header = props => {
             </li>
             <li>
               <Link to="/search">
-                Search
+                Buscar
               </Link>
             </li>
           </ul>
@@ -56,7 +56,7 @@ const Header = props => {
 
             <li>
               <Link to="/cart">
-                Your Cart ({totalNumCartItems})
+                Carrito ({totalNumCartItems})
                 <i class="fas fa-shopping-basket"></i>
               </Link>
             </li>
@@ -64,13 +64,13 @@ const Header = props => {
             {currentUser && [
               <li key={1}>
                 <Link to="/dashboard">
-                  My Account
+                  Mi Cuenta
                   <i class="fas fa-user-circle"></i>
                 </Link>
               </li>,
               <li key={2}>
                 <span onClick={() => signOut()}>
-                  LogOut
+                  Salir
                   <i class="fas fa-sign-out-alt"></i>
                 </span>
               </li>
@@ -79,12 +79,12 @@ const Header = props => {
             {!currentUser && [
               <li key={1} className="hideOnMobile">
                 <Link to="/registration">
-                  Register
+                  Registro
                 </Link>
               </li>,
               <li key={2}>
                 <Link to="/login">
-                  Login
+                  Ingresar
                   <i class="fas fa-user-circle"></i>
                 </Link>
               </li>

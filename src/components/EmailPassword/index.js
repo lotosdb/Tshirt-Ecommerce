@@ -71,18 +71,18 @@ const EmailPassword = props => {
           />
 
           <Button type="submit">
-            Email Password
+            Contraseña
           </Button>
 
         </form>
 
         <div className="links">
           <Link to="/login">
-            LogIn
+            Ingresar
           </Link>
           {` | `}
           <Link to="/registration">
-            Register
+            Registro
           </Link>
         </div>
 

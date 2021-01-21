@@ -16,12 +16,12 @@ const Checkout = ({ }) => {
   const history = useHistory();
   const { cartItems, total } = useSelector(mapState);
 
-  const errMsg = 'You have no items in your cart.';
+  const errMsg = 'No tienes articulos en tu carrito.';
 
   return (
     <div className="checkout">
       <h1>
-        Checkout
+        Confirma
       </h1>
 
       <div className="cart">
@@ -34,19 +34,19 @@ const Checkout = ({ }) => {
                     <tbody>
                       <tr>
                         <th>
-                          Product
+                          Producto
                         </th>
                         <th>
-                          Description
+                          Descripción
                         </th>
                         <th>
-                          Quantity
+                          Cantidad
                         </th>
                         <th>
-                          Price
+                          Precio
                         </th>
                         <th>
-                          Remove
+                          Eliminar
                         </th>
                       </tr>
                     </tbody>
@@ -96,12 +96,12 @@ const Checkout = ({ }) => {
                               <tr>
                                 <td>
                                   <Button onClick={() => history.goBack()}>
-                                    Continue Shopping
+                                    Continuar Comprando
                                   </Button>
                                 </td>
                                 <td>
                                   <Button onClick={() => history.push('/payment')}>
-                                    Checkout
+                                    Carrito
                                   </Button>
                                 </td>
                               </tr>
