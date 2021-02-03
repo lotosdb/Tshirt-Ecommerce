@@ -83,7 +83,7 @@ const Admin = props => {
         <ul>
           <li>
             <Button onClick={() => toggleModal()}>
-              Add new product
+              Agregar nuevo producto
             </Button>
           </li>
         </ul>
@@ -94,17 +94,17 @@ const Admin = props => {
           <form onSubmit={handleSubmit}>
 
             <h2>
-              Add new product
+              Agregar nuevo producto
             </h2>
 
             <FormSelect
               label="Category"
               options={[{
-                value: "mens",
-                name: "Mens"
+                value: "estampados",
+                name: "Estampados"
               }, {
-                value: "womens",
-                name: "Womens"
+                value: "camisetas",
+                name: "Camisetas"
               }]}
               handleChange={e => setProductCategory(e.target.value)}
             />
@@ -140,7 +140,7 @@ const Admin = props => {
             <br />
 
             <Button type="submit">
-              Add product
+              Agregar Nuevo Producto
             </Button>
 
           </form>
@@ -154,7 +154,7 @@ const Admin = props => {
             <tr>
               <th>
                 <h1>
-                  Manage Products
+                  Gestionar Productos
                 </h1>
               </th>
             </tr>
@@ -183,7 +183,7 @@ const Admin = props => {
                           </td>
                           <td>
                             <Button onClick={() => dispatch(deleteProductStart(documentID))}>
-                              Delete
+                              Eliminar
                             </Button>
                           </td>
                         </tr>

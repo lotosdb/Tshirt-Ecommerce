@@ -47,11 +47,11 @@ const ProductResults = ({ }) => {
       name: 'Show all',
       value: ''
     }, {
-      name: 'Mens',
-      value: 'mens'
+      name: 'Estampados',
+      value: 'estampados'
     }, {
-      name: 'Womens',
-      value: 'womens'
+      name: 'Camisetas',
+      value: 'camisetas'
     }],
     handleChange: handleFilter
   };
