@@ -35,7 +35,7 @@ const ProductResults = ({ }) => {
     return (
       <div className="products">
         <p>
-          No search results.
+          No se encontraron resultados.
         </p>
       </div>
     );
@@ -44,7 +44,7 @@ const ProductResults = ({ }) => {
   const configFilters = {
     defaultValue: filterType,
     options: [{
-      name: 'Show all',
+      name: 'Mostrar Todos',
       value: ''
     }, {
       name: 'Estampados',
@@ -74,7 +74,7 @@ const ProductResults = ({ }) => {
     <div className="products">
 
       <h1>
-        Browse Products
+        Buscar Productos
       </h1>
 
       <FormSelect {...configFilters} />

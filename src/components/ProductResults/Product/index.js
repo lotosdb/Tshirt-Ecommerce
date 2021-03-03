@@ -47,13 +47,13 @@ const Product = (product) => {
           </li>
           <li>
             <span className="price">
-              £{productPrice}
+              ${productPrice}
             </span>
           </li>
           <li>
             <div className="addToCart">
               <Button {...configAddToCartBtn} onClick={() => handleAddToCart(product)}>
-                Add to cart
+                Agregar al Carrito
               </Button>
             </div>
           </li>

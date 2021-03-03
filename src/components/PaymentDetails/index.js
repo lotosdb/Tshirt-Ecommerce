@@ -101,7 +101,7 @@ const PaymentDetails = () => {
           payment_method: paymentMethod.id
         })
         .then(({ paymentIntent }) => {
-
+          console.log(paymentIntent)
           const configOrder = {
             orderTotal: total,
             orderItems: cartItems.map(item => {
@@ -146,12 +146,12 @@ const PaymentDetails = () => {
 
         <div className="group">
           <h2>
-            Shipping Address
+            Datos de envio
           </h2>
 
           <FormInput
             required
-            placeholder="Recipient Name"
+            placeholder="Nombre del destinatario"
             name="recipientName"
             handleChange={evt => setRecipientName(evt.target.value)}
             value={recipientName}
@@ -160,7 +160,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="Line 1"
+            placeholder="Dirección 1"
             name="line1"
             handleChange={evt => handleShipping(evt)}
             value={shippingAddress.line1}
@@ -168,7 +168,7 @@ const PaymentDetails = () => {
           />
 
           <FormInput
-            placeholder="Line 2"
+            placeholder="Dirección 2"
             name="line2"
             handleChange={evt => handleShipping(evt)}
             value={shippingAddress.line2}
@@ -177,7 +177,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="City"
+            placeholder="Ciudad"
             name="city"
             handleChange={evt => handleShipping(evt)}
             value={shippingAddress.city}
@@ -186,7 +186,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="State"
+            placeholder="Departamento"
             name="state"
             handleChange={evt => handleShipping(evt)}
             value={shippingAddress.state}
@@ -195,7 +195,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="Postal Code"
+            placeholder="Codigo Postal"
             name="postal_code"
             handleChange={evt => handleShipping(evt)}
             value={shippingAddress.postal_code}
@@ -220,12 +220,12 @@ const PaymentDetails = () => {
 
         <div className="group">
           <h2>
-            Billing Address
+            Dirección de Facturación
           </h2>
 
           <FormInput
             required
-            placeholder="Name on Card"
+            placeholder="Número de tarjeta"
             name="nameOnCard"
             handleChange={evt => setNameOnCard(evt.target.value)}
             value={nameOnCard}
@@ -234,7 +234,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="Line 1"
+            placeholder="Dirección 1"
             name="line1"
             handleChange={evt => handleBilling(evt)}
             value={billingAddress.line1}
@@ -242,7 +242,7 @@ const PaymentDetails = () => {
           />
 
           <FormInput
-            placeholder="Line 2"
+            placeholder="Dirección 2"
             name="line2"
             handleChange={evt => handleBilling(evt)}
             value={billingAddress.line2}
@@ -251,7 +251,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="City"
+            placeholder="Ciudad"
             name="city"
             handleChange={evt => handleBilling(evt)}
             value={billingAddress.city}
@@ -260,7 +260,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="State"
+            placeholder="Departamento"
             name="state"
             handleChange={evt => handleBilling(evt)}
             value={billingAddress.state}
@@ -269,7 +269,7 @@ const PaymentDetails = () => {
 
           <FormInput
             required
-            placeholder="Postal Code"
+            placeholder="Código Postal"
             name="postal_code"
             handleChange={evt => handleBilling(evt)}
             value={billingAddress.postal_code}
@@ -294,7 +294,7 @@ const PaymentDetails = () => {
 
         <div className="group">
           <h2>
-            Card Details
+            Detalles Tarjeta
           </h2>
 
           <CardElement
@@ -305,7 +305,7 @@ const PaymentDetails = () => {
         <Button
           type="submit"
         >
-          Pay Now
+          Pagar 
         </Button>
 
       </form>

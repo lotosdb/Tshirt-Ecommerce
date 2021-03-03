@@ -17,7 +17,7 @@ const Admin = props => {
   const { products } = useSelector(mapState);
   const dispatch = useDispatch();
   const [hideModal, setHideModal] = useState(true);
-  const [productCategory, setProductCategory] = useState('mens');
+  const [productCategory, setProductCategory] = useState('estampados');
   const [productName, setProductName] = useState('');
   const [productThumbnail, setProductThumbnail] = useState('');
   const [productPrice, setProductPrice] = useState(0);
@@ -40,7 +40,7 @@ const Admin = props => {
 
   const resetForm = () => {
     setHideModal(true);
-    setProductCategory('mens');
+    setProductCategory('estampados');
     setProductName('');
     setProductThumbnail('');
     setProductPrice(0);
@@ -179,7 +179,7 @@ const Admin = props => {
                             {productName}
                           </td>
                           <td>
-                            £{productPrice}
+                            ${productPrice}
                           </td>
                           <td>
                             <Button onClick={() => dispatch(deleteProductStart(documentID))}>
